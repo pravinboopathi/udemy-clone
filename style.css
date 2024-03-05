@@ -20,6 +20,10 @@ body{
     border-bottom: 1px solid black;
     gap: 50px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1__title{
@@ -39,6 +43,7 @@ body{
     width: 100%;
     border: none;
     font-size: 16px;
+    background-color: transparent;
 }
 
 
@@ -52,6 +57,30 @@ body{
     font-size: 16px;
     /* margin: 10px; */
 }
+
+
+/* My learning popup */
+.myLearning{
+    position: relative;
+    cursor: pointer;
+}
+.myLearning_popup{
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    width: 150px;
+    top: 30px;
+    padding: 10px;
+    right: 0;
+    display: none;
+}
+
+.myLearning:hover .myLearning_popup{
+    display: block;
+}
+
+
+
 
 
 /* Categories  */
@@ -71,9 +100,31 @@ body{
 }
 
 /* sale img  */
+.sale-img{
+    position: relative;
+}
 .sale-img img{
     width: 100%;
+
 }
+
+
+.sale-img-offer{
+    background-color: white;
+    width:35%;
+    border: 2px solid black;
+    padding: 2%;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    
+}
+
+
+
+
+
+
 
 /* Recommended */
 .recommended{
@@ -82,17 +133,14 @@ body{
 
 .course-card{
     width: 300px;
-    transition: transform 0.3s ease-in-out;
     /* background-color: black; */
 }
 
-.course-card:hover{
-   transform: scale(1.1,1.1);
-}
+
 
 
 .course-card img{
-    border-radius: 10px;
+    /* border-radius: 10px; */
     height: 50%;
     width: 100%;
 }
